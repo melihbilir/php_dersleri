@@ -11,7 +11,7 @@ $kurslar = [
 
         ];
 
-        // ikinci kayıt değiştirme denemesi
+        
 
 
 ?>
