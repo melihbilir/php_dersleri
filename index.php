@@ -9,9 +9,9 @@ $kurslar = [
 
         ]
 
-]
+        ];
 
-
+        // deneme için buraya birşeyler yazıyorum
 
 
 ?>
