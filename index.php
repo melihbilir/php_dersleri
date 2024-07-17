@@ -1,17 +1,31 @@
 <?php
-$kategoriler = ["Programlama","Web Geliştirme","Mobil Uygulama"];
+$kategoriler = ["Programlama","Web Geliştirme","Mobil Uygulama","Ofis Uygulamaları"];
 $kurslar = [
         [
             "id" => 1,
             "baslik" => "Web Geliştime Kursu",
             "aciklama" => "Güzel bir kurs",
-            "resim" => "1.jpg"
+            "resim" => "1.jpg",
+            "onay" => true
 
-        ]
+        ],
+        [
+            "id" => 2,
+            "baslik" => "Python Kursu",
+            "aciklama" => "Güzel bir kurs",
+            "resim" => "2.jpg",
+            "onay" => true
 
-        ];
+        ],
+        [
+            "id" => 1,
+            "baslik" => "JavaScript Kursu",
+            "aciklama" => "Güzel bir kurs",
+            "resim" => "3.jpg",
+            "onay" => false
 
-        
+        ],
+        ];  
 
 
 ?>
@@ -45,58 +59,46 @@ $kurslar = [
         <div class="row">
             <div class="col-4">
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Programlama</a>
-                    <a href="#" class="list-group-item list-group-item-action">Web geliştirme</a>
-                    <a href="#" class="list-group-item list-group-item-action">mobil uygulama</a>
+                    <?php for ($i=0; $i <count($kategoriler) ; $i++):                  
+                     ?>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <?php echo $kategoriler[$i]; ?>
+
+                    </a>
+
+                    <?php endfor;?>
+
                 </div>
             </div>
             <div class="col-9">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-3">
-                        <img src="" alt="" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body">
-                            <h5 class="card-title">Web Geliştirme</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
-                                elit. Suscipit iste dolores natus quos exercitationem
-                                 eos ab alias. Veritatis, ex commodi?</p>
-                                 </div>
-                                </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-3">
-                        <img src="" alt="" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body">
-                            <h5 class="card-title">Phython Kursu</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
-                                elit. Suscipit iste dolores natus quos exercitationem
-                                 eos ab alias. Veritatis, ex commodi?</p>
-                                 </div>
-                                </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-3">
-                        <img src="" alt="" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-9">
-                            <div class="card-body">
-                            <h5 class="card-title">JavaScript Kursu</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
-                                elit. Suscipit iste dolores natus quos exercitationem
-                                 eos ab alias. Veritatis, ex commodi?</p>
-                                 </div>
-                                </div>
-                    </div>
-                </div>
+            <?php foreach($kurslar as $kurs):   ?>
 
+                <?php if($kurs["onay"]):   ?>
+                        
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-md-4">
+                        <img src="img/<?php echo $kurs['resim'];?>" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            
+                            <div class="card-body">
+                            <h5 class="card-title">
+                                    <?php echo $kurs["baslik"];   ?>
+
+                            </h5>
+
+                            <p><?php echo $kurs["aciklama"];   ?></p>
+                                 </div>
+
+                                 
+                         </div>
+                    </div>
+                </div>
+                </div>
+                <?php endif;?>
+            <?php endforeach; ?>
             </div>
         </div>
     </div>
