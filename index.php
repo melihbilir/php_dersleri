@@ -1,4 +1,4 @@
-<?php
+<?php     // masa üstü kullanmadan güncelleme yapmak........
 $kategoriler = ["Programlama","Web Geliştirme","Mobil Uygulama","Ofis Uygulamaları"];
 $kurslar = [
         [
