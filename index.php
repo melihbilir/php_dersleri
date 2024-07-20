@@ -1,4 +1,6 @@
-<?php     
+    
+
+    <?php     
 $kategoriler = ["Programlama","Web Geliştirme","Mobil Uygulama","Ofis Uygulamaları"];
 $kurslar = [
         [
@@ -32,7 +34,7 @@ $kurslar = [
         ],
         ];  
 
-        
+        // git e geri yüklemeye çalışyorum bakalım...
 ?>
         <?php include('partials/_header.php') ?>
         <?php include('partials/_navbar.php') ?>
