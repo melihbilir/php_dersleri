@@ -6,8 +6,7 @@ $kurslar = [
             "baslik" => "Web Geliştime Kursu",
             "aciklama" => "Güzel bir kurs",
             "resim" => "1.jpg",
-            "onay" => true,
-            "anasayfa" => true,
+            "onay" => true
 
         ],
         [
@@ -15,9 +14,7 @@ $kurslar = [
             "baslik" => "Python Kursu",
             "aciklama" => "Güzel bir kurs",
             "resim" => "2.jpg",
-            "onay" => true,
-            "anasayfa" => false,
-
+            "onay" => true
 
         ],
         [
@@ -25,9 +22,7 @@ $kurslar = [
             "baslik" => "JavaScript Kursu",
             "aciklama" => "Güzel bir kurs",
             "resim" => "3.jpg",
-            "onay" => false,
-            "anasayfa" => true,
-
+            "onay" => false
 
         ],
         ];  
@@ -47,12 +42,12 @@ $kurslar = [
             <div class="col-9">
             <?php foreach($kurslar as $kurs):   ?>
 
-                <?php if($kurs["onay"] and $kurs["anasayfa"]):   ?>
+                <?php if($kurs["onay"]):   ?>
                     <?php include('partials/_kurs.php') ?>
                 <?php endif;?>
 
-            <?php endforeach; ?>
 
+            <?php endforeach; ?>
             </div>
         </div>
     </div>
